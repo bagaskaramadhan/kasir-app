@@ -1,0 +1,40 @@
+Ketiga pustaka ini—@reduxjs/toolkit, react-redux, dan redux—berhubungan dengan manajemen state di aplikasi React, namun mereka memiliki peran dan fungsi yang berbeda. Berikut adalah penjelasan mengenai masing-masing pustaka serta perbedaan di antara mereka:
+
+1. **Redux**:
+   - **Fungsi Utama**: Redux adalah pustaka untuk mengelola state global di aplikasi JavaScript. Ini tidak spesifik untuk React dan bisa digunakan dengan pustaka atau kerangka kerja JavaScript lainnya.
+   - **Konsep Dasar**: Redux menggunakan store, actions, dan reducers untuk mengelola state aplikasi secara prediktif dan terpusat.
+   - **Kelebihan**: Memisahkan state management dari logika UI, mendukung debugging yang kuat melalui alat seperti Redux DevTools, dan memudahkan pengujian.
+
+2. **React-Redux**:
+   - **Fungsi Utama**: React-Redux adalah pustaka pengikat resmi untuk mengintegrasikan Redux dengan React. Ini menyediakan API untuk menghubungkan komponen React ke store Redux.
+   - **Komponen Utama**:
+     - `Provider`: Komponen yang menyediakan store Redux ke seluruh aplikasi React.
+     - `connect`: Fungsi untuk menghubungkan komponen React ke state Redux dan dispatch actions.
+   - **Kelebihan**: Mengabstraksi detail teknis integrasi Redux dengan React, membuat kode lebih bersih dan terstruktur.
+
+3. **@reduxjs/toolkit**:
+   - **Fungsi Utama**: @reduxjs/toolkit (RTK) adalah toolkit resmi untuk Redux yang menyederhanakan penulisan logika Redux dan mendorong praktik terbaik.
+   - **Fitur Utama**:
+     - `configureStore`: Mengatur store Redux dengan pengaturan standar seperti middleware dan integrasi DevTools.
+     - `createSlice`: Menyederhanakan penulisan reducers dan actions.
+     - `createAsyncThunk`: Mengelola logika async dalam Redux, seperti fetching data.
+     - `createEntityAdapter`: Mempermudah pengelolaan collections dalam state.
+   - **Kelebihan**: Mengurangi boilerplate code, menyediakan alat dan pola yang disarankan, meningkatkan kinerja, dan membantu menghindari kesalahan umum.
+
+### Perbedaan Utama:
+1. **Tingkat Abstraksi**:
+   - **Redux**: Memberikan dasar yang fleksibel untuk manajemen state, namun memerlukan banyak kode boilerplate.
+   - **React-Redux**: Berfungsi sebagai penghubung antara Redux dan React, tidak mengurangi boilerplate dari Redux itu sendiri.
+   - **@reduxjs/toolkit**: Mengabstraksi dan menyederhanakan banyak aspek dari Redux, mengurangi kode boilerplate secara signifikan dan menyediakan fitur tambahan.
+
+2. **Kemudahan Penggunaan**:
+   - **Redux**: Lebih fleksibel tetapi memerlukan lebih banyak konfigurasi manual dan kode boilerplate.
+   - **React-Redux**: Mempermudah penggunaan Redux dengan React tetapi tetap memerlukan konfigurasi Redux yang mendasar.
+   - **@reduxjs/toolkit**: Sangat memudahkan pengaturan dan penggunaan Redux dengan banyak konfigurasi otomatis dan fitur built-in.
+
+3. **Fitur Tambahan**:
+   - **Redux**: Hanya menyediakan dasar untuk manajemen state.
+   - **React-Redux**: Menyediakan binding antara React dan Redux, tanpa menambah fitur manajemen state.
+   - **@reduxjs/toolkit**: Menyediakan berbagai alat dan utilitas untuk mempermudah pengembangan dengan Redux, seperti `createSlice` dan `createAsyncThunk`.
+
+Dalam rangka memilih mana yang harus digunakan, jika Anda hanya membutuhkan dasar manajemen state global dan Anda nyaman dengan penulisan kode yang lebih verbose, Anda bisa menggunakan Redux dan React-Redux. Namun, jika Anda menginginkan cara yang lebih sederhana dan cepat untuk mengatur Redux dengan praktik terbaik, @reduxjs/toolkit adalah pilihan yang sangat direkomendasikan.

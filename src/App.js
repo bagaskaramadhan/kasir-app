@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { CartComponent, CategoryComponent, NavbarComponent, ProductComponent } from "./components"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavbarComponent />
+      <div className='content-above-navbar'>
+        <div className='col-2'>
+          <CategoryComponent />
+        </div>
+        <div className='col-8'>
+          <ProductComponent />
+        </div>
+        <div className='col-2'>
+          <CartComponent />
+        </div>
+      </div>
     </div>
   );
 }
